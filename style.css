@@ -1,0 +1,411 @@
+body {
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   background: linear-gradient(0deg, rgba(255,248,254,1) 32%, rgba(255,207,250,1) 58%, rgba(255,158,246,1) 70%);
+   color: black;
+  
+}
+
+.nav-movil{
+    display: none;
+}
+
+header{
+  display: flex;
+  align-items: center; 
+}
+
+.nav-bar{
+    background-color: rgb(253, 192, 228);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 26px;
+    width: 100%;
+}
+h2{
+    display: flex;
+    font-family: monospace;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra{
+    margin-top: 24px;
+    margin-right: 10px;
+    height: 50px;
+    text-decoration: none;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+}
+
+a{
+        color: black;
+        text-decoration: none;
+        transition: color 0.5s;
+}
+a:hover{
+    color: rgb(250, 134, 202);
+}
+a:active{
+    color: rgb(203, 95, 236);
+
+}
+
+p{
+    margin: 0%;
+    margin-right: 10px;
+    margin-left: 10px;
+    color:black;
+    font-family: 'Trirong, serif';
+    font-size: 20px;
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+}
+
+.formaDeViaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tipos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.tipo-de-vehiculos{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 3000px;
+    max-height: 300px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.4s;
+}
+.tipo-de-vehiculos:hover{
+    transform: scale(1.1);
+}
+.destino{
+    margin-top: -16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;     
+}
+
+.destinos-container{
+    margin-top: -10px;
+    display: flex;
+    gap: 30px;
+}
+.container-destino{
+    margin-top: -12px;
+}
+
+.ciudades{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    transition: transform 0.5s;
+    max-width: 350px;
+    padding: 5px;
+    border-radius: 15px;
+}
+.ciudad-mdq{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+}
+.ciudades:hover{
+    transform: scale(1.04);
+}
+.Sn{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c93384;
+    background-color: #fdcae1;
+    box-shadow: 0 8px 20px rgb(0, 0, 0);
+    padding: 80px;
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.personal-dates{
+    display: flex;
+    gap: 10px;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.input-field{
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.large{
+    width: 356px;
+}
+
+.btn-form{
+    height: 50px;
+    width: 120px;
+    background-color: transparent;
+    border: 1px solid black;
+    background-color: aliceblue;
+    border-radius: 20px;
+    transition: all 0.3s;
+   
+}
+.btn-form:hover{
+    background-color:#ff6bff;
+    color: white;
+    transform: scale(1.1);
+}
+
+@media (width <= 1024px){
+    .tipo-de-vehiculos{
+        width: 300px;
+    }
+
+    .tipo-de-vehiculos img{
+        height: 300px;
+    }
+
+    .ciudades{
+        width: 80%;
+    }
+
+    .ciudades img{
+        height: 95%;
+        width: 95%;
+    }
+}
+
+@media (width <= 768px){
+
+    .nav-bar{
+        display: none;
+      }
+  
+      .nav-movil{
+       display: flex;
+       justify-content: end;
+      }
+  
+      .menu-movil {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 160px;
+        height: 100%;
+        background-color: #fdcae1;
+        transition: left 0.3s;
+        z-index: 2;
+      }
+      
+      #toggle-menu {
+        display: none;
+      }
+      
+      .abrir-menu {
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        background-color: rgb(168, 168, 168);
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+        padding: 5px;
+        z-index: 2;
+        transition: left 0.3s;
+        border-radius: 15px;
+      }
+      
+      .abrir-menu::after {
+        content: attr(data-open);
+      }
+      
+      #toggle-menu:checked+.abrir-menu::after {
+        content: attr(data-close);
+      }
+      
+      .lista-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .lista-menu li {
+        padding: 10px 0;
+      }
+      
+      .lista-menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        display: block;
+        padding: 10px 20px;
+        transition: background-color 0.3s;
+      }
+      
+      .lista-menu a:hover {
+        background-color: #5366f5;
+      }
+      
+      #toggle-menu:checked~.menu-movil {
+        left: 0;
+      }
+      
+      #toggle-menu:checked~.abrir-menu {
+        left: 180px;
+      }
+      
+      #toggle-menu:checked~.contenido {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      
+      .contenido {
+        transition: background-color 0.3s;
+      }
+
+    .ciudades{
+        width: 400px;
+    }
+
+    .ciudades img{
+        height: 95%;
+        width: 95%;
+    }
+
+    .ciudades:hover{
+        transform: scale(1);
+    }
+
+    .tipo-de-vehiculos:hover{
+        transform: scale(1);
+    }
+    
+    .tipos{
+        display: block;
+    }
+
+    .destinos-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .tittle-form{
+        font-size: 15px;
+    }
+
+    .form{
+        padding: 50px;
+    }
+
+    .nav-bar p, .nav-bar a{
+        font-size: 16px;
+    }
+}
+
+@media (width <= 749px){
+    .destinos-container{
+        display: block;
+        gap: 100px;
+    }
+}
+
+@media (width <= 605px){
+    .tittle-form{
+        font-size: 14px;
+    }
+
+    .form{
+        padding: 40px;
+    }
+}
+
+@media (width <= 513px){
+    .tittle-form{
+        font-size: 12px;
+    }
+
+    .form{
+        padding: 30px;
+    }
+}
+
+@media (width <= 320px){
+    .form{
+       width: 250px;
+        
+    }
+    .input-field{
+        width: 100px;
+    }
+    .ciudades{
+        width: 250px;
+    }
+    .tipo-de-vehiculos{
+        width: 250px;
+    }
+    .tipo-de-vehiculos img{
+        width: 250px;
+    }
+}
+@media(width <= 280px){
+    .form{
+        width: 198px;
+    }
+    .input-field{
+        width: 115px;
+    }
+}
